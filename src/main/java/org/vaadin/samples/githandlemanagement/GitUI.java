@@ -86,8 +86,7 @@ public class GitUI extends UI {
                             if (!searches.contains(githandle.getValue())) {
                                 githandlesCache.getJedis().lpush("history", githandle.getValue());
                                 Notification.show("Pattern : " + githandle.getValue() + " is now saved to past searches", Notification.Type.WARNING_MESSAGE);
-                            } else
-                                Notification.show("Pattern : " + githandle.getValue() + " is already present in past searches", Notification.Type.WARNING_MESSAGE);
+                            }
 
                             Button backToSearchButton1 = new Button("Back to search");
                             backToSearchButton1.addClickListener(new Button.ClickListener() {
